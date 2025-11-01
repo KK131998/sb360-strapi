@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steckbriefs",
+  "info": {
+    "singularName": "steckbrief",
+    "pluralName": "steckbriefs",
+    "displayName": "Steckbrief"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "bild": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "wohnort": {
+      "type": "string"
+    },
+    "geburtsdatum": {
+      "type": "date"
+    },
+    "lieblingsspieler": {
+      "type": "string"
+    },
+    "lieblingsverein": {
+      "type": "string"
+    },
+    "motto": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "beschreibung": {
+      "type": "text"
+    }
+  }
+}

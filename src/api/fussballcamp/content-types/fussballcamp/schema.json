@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fussballcamps",
+  "info": {
+    "singularName": "fussballcamp",
+    "pluralName": "fussballcamps",
+    "displayName": "Fußballcamp"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ort": {
+      "type": "string",
+      "default": "SB_Fußballcamp"
+    },
+    "preis_in_cent": {
+      "type": "integer"
+    },
+    "datum": {
+      "type": "date"
+    },
+    "bild": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "minAlter": {
+      "type": "integer"
+    },
+    "maxAlter": {
+      "type": "integer"
+    }
+  }
+}

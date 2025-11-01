@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "startbilds",
+  "info": {
+    "singularName": "startbild",
+    "pluralName": "startbilds",
+    "displayName": "Startbild"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "starttext": {
+      "type": "string"
+    },
+    "startbild": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "schriftfarbe": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    },
+    "schriftrandfarbe": {
+      "type": "customField",
+      "customField": "plugin::color-picker.color",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$"
+    }
+  }
+}
