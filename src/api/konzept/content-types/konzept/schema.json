@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "konzepts",
+  "info": {
+    "singularName": "konzept",
+    "pluralName": "konzepts",
+    "displayName": "Konzept"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ueberschrift": {
+      "type": "string"
+    },
+    "text_unter_ueberschrift": {
+      "type": "text"
+    },
+    "bild_konzept": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

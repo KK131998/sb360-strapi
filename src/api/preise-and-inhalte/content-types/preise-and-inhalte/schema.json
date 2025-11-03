@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "preise_and_inhaltes",
+  "info": {
+    "singularName": "preise-and-inhalte",
+    "pluralName": "preise-and-inhaltes",
+    "displayName": "Preise&Inhalte"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ueberschrift": {
+      "type": "string"
+    },
+    "text_unter_ueberschrift": {
+      "type": "string"
+    }
+  }
+}

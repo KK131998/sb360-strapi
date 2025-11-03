@@ -533,6 +533,96 @@ export interface ApiKontaktKontakt extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiKonzeptKonzept extends Struct.SingleTypeSchema {
+  collectionName: 'konzepts';
+  info: {
+    displayName: 'Konzept';
+    pluralName: 'konzepts';
+    singularName: 'konzept';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bild_konzept: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::konzept.konzept'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_unter_ueberschrift: Schema.Attribute.Text;
+    ueberschrift: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
+  collectionName: 'navbars';
+  info: {
+    displayName: 'Navbar';
+    pluralName: 'navbars';
+    singularName: 'navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navbar.navbar'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPreiseAndInhaltePreiseAndInhalte
+  extends Struct.SingleTypeSchema {
+  collectionName: 'preise_and_inhaltes';
+  info: {
+    displayName: 'Preise&Inhalte';
+    pluralName: 'preise-and-inhaltes';
+    singularName: 'preise-and-inhalte';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::preise-and-inhalte.preise-and-inhalte'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    text_unter_ueberschrift: Schema.Attribute.String;
+    ueberschrift: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiStartbildStartbild extends Struct.SingleTypeSchema {
   collectionName: 'startbilds';
   info: {
@@ -1115,6 +1205,9 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::fussballcamp.fussballcamp': ApiFussballcampFussballcamp;
       'api::kontakt.kontakt': ApiKontaktKontakt;
+      'api::konzept.konzept': ApiKonzeptKonzept;
+      'api::navbar.navbar': ApiNavbarNavbar;
+      'api::preise-and-inhalte.preise-and-inhalte': ApiPreiseAndInhaltePreiseAndInhalte;
       'api::startbild.startbild': ApiStartbildStartbild;
       'api::steckbrief.steckbrief': ApiSteckbriefSteckbrief;
       'plugin::content-releases.release': PluginContentReleasesRelease;
