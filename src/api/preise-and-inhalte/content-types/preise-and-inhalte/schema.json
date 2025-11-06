@@ -16,6 +16,27 @@
     },
     "text_unter_ueberschrift": {
       "type": "string"
+    },
+    "ueberschrift_links": {
+      "type": "string"
+    },
+    "text_links": {
+      "type": "text"
+    },
+    "ueberschrift_rechts": {
+      "type": "string"
+    },
+    "text_rechts": {
+      "type": "text"
+    },
+    "preis_rechts": {
+      "type": "string"
+    },
+    "liste_links": {
+      "type": "blocks"
+    },
+    "liste_rechts": {
+      "type": "blocks"
     }
   }
 }

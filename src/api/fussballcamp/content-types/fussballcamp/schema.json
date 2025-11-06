@@ -18,7 +18,10 @@
     "preis_in_cent": {
       "type": "integer"
     },
-    "datum": {
+    "von_datum": {
+      "type": "date"
+    },
+    "bis_datum": {
       "type": "date"
     },
     "bild": {

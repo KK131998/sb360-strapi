@@ -480,10 +480,10 @@ export interface ApiFussballcampFussballcamp
   };
   attributes: {
     bild: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    bis_datum: Schema.Attribute.Date;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    datum: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -499,6 +499,7 @@ export interface ApiFussballcampFussballcamp
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    von_datum: Schema.Attribute.Date;
   };
 }
 
@@ -557,6 +558,18 @@ export interface ApiKonzeptKonzept extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    saeule1_text: Schema.Attribute.Text;
+    saeule1_ueberschrift: Schema.Attribute.String;
+    saeule2_text: Schema.Attribute.Text;
+    saeule2_ueberschrift: Schema.Attribute.String;
+    saeule3_text: Schema.Attribute.Text;
+    saeule3_ueberschrift: Schema.Attribute.String;
+    saeule4_text: Schema.Attribute.Text;
+    saeule4_ueberschrift: Schema.Attribute.String;
+    saeule5_text: Schema.Attribute.Text;
+    saeule5_ueberschrift: Schema.Attribute.String;
+    saeule6_text: Schema.Attribute.Text;
+    saeule6_ueberschrift: Schema.Attribute.String;
     text_unter_ueberschrift: Schema.Attribute.Text;
     ueberschrift: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -608,15 +621,22 @@ export interface ApiPreiseAndInhaltePreiseAndInhalte
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    liste_links: Schema.Attribute.Blocks;
+    liste_rechts: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::preise-and-inhalte.preise-and-inhalte'
     > &
       Schema.Attribute.Private;
+    preis_rechts: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    text_links: Schema.Attribute.Text;
+    text_rechts: Schema.Attribute.Text;
     text_unter_ueberschrift: Schema.Attribute.String;
     ueberschrift: Schema.Attribute.String;
+    ueberschrift_links: Schema.Attribute.String;
+    ueberschrift_rechts: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

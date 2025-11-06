@@ -26,6 +26,42 @@
         "videos",
         "audios"
       ]
+    },
+    "saeule1_ueberschrift": {
+      "type": "string"
+    },
+    "saeule2_ueberschrift": {
+      "type": "string"
+    },
+    "saeule3_ueberschrift": {
+      "type": "string"
+    },
+    "saeule4_ueberschrift": {
+      "type": "string"
+    },
+    "saeule5_ueberschrift": {
+      "type": "string"
+    },
+    "saeule6_ueberschrift": {
+      "type": "string"
+    },
+    "saeule1_text": {
+      "type": "text"
+    },
+    "saeule2_text": {
+      "type": "text"
+    },
+    "saeule3_text": {
+      "type": "text"
+    },
+    "saeule4_text": {
+      "type": "text"
+    },
+    "saeule5_text": {
+      "type": "text"
+    },
+    "saeule6_text": {
+      "type": "text"
     }
   }
 }
